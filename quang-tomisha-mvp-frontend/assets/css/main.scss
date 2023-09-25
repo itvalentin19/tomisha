@@ -1,0 +1,103 @@
+/* purgecss start ignore */
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Regular.woff2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Medium.woff2") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Semibold.woff2") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+html {
+  font-size: 14px;
+  @apply tracking-wider text-gray-700 bg-gray-100;
+}
+
+body {
+  @apply pt-1.125;
+
+  &::before {
+    content: '';
+    @apply block fixed top-0 left-0 right-0 z-30 bg-gradient-r-primary h-1.125 visible;
+  }
+}
+
+html,
+body {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+* {
+  outline: none !important;
+}
+
+input:-webkit-autofill {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    transition: background-color 0s ease-in-out 5000s !important;
+    -webkit-text-fill-color: #4a5568 !important;
+    caret-color: #4a5568 !important;
+  }
+
+  &::first-line {
+    font-size: 1rem !important;
+    font-family: "Lato", sans-serif !important;
+  }
+}
+
+@media (min-width: 768px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f7f7f7;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 8px;
+    border: 3px solid rgba(0,0,0,0);
+    background-clip: padding-box;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+    background-clip: padding-box;
+  }
+
+  // Firefox
+  * {
+    scrollbar-color: rgba(#777, .7) transparent;
+    scrollbar-width: thin;
+  }
+}
+/* purgecss end ignore */
